@@ -1,0 +1,324 @@
+/*
+======================================
+Fonts
+======================================
+*/
+
+@font-face {
+    font-family: "Basis Grotesque Pro";
+    src:    url("fonts/BasisGrotesquePro-Regular.woff2") format("woff2"),
+            url("fonts/BasisGrotesquePro-Regular.woff") format("woff"),
+            url("fonts/BasisGrotesquePro-Regular.eot") format("embedded opentype"),
+            url("fonts/BasisGrotesquePro-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-display: fallback;  
+}
+
+@font-face {
+    font-family: "Basis Grotesque Pro";
+    src:    url("fonts/BasisGrotesquePro-Bold.woff2") format("woff2"),
+            url("fonts/BasisGrotesquePro-Bold.woff") format("woff"),
+            url("fonts/BasisGrotesquePro-Bold.eot") format("embedded opentype"),
+            url("fonts/BasisGrotesquePro-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: fallback;  
+}
+
+@font-face {
+    font-family: "Basis Grotesque Pro";
+    src:    url("fonts/BasisGrotesquePro-Light.woff2") format("woff2"),
+            url("fonts/BasisGrotesquePro-Light.woff") format("woff"),
+            url("fonts/BasisGrotesquePro-Light.eot") format("embedded opentype"),
+            url("fonts/BasisGrotesquePro-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    font-display: fallback; 
+}
+
+/*
+======================================
+Basic styles
+======================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    font-family: "Basis Grotesque Pro", system-ui;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin: 0 auto;
+    min-width: 280px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.link {
+    text-decoration: none;
+    opacity: 1;
+    color: #0536FC;
+}
+
+.grid--none {
+    margin: 100px auto;
+    width: 90%;
+}
+
+/*
+======================================
+Heading
+======================================
+*/
+
+.heading__subtitle {
+    font-weight: 700;
+    margin: 0;
+}
+
+.heading__subtitle--blue {
+    color: #0536FC;
+    opacity: 0.9;
+}
+
+.heading__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+/*
+======================================
+Flex / container
+======================================
+*/
+
+.container {
+    display: flex;
+}
+
+.container--align {
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.container--wrapped {
+    flex-wrap: wrap;
+}
+
+.container--bottom-margin {
+    margin-bottom: 30px;
+}
+
+.container--top-margin-l {
+    margin-top: 50px;
+}
+
+.container--top-margin-m {
+    margin-top: 30px;
+}
+
+.container--top-margin-s {
+    margin-top: 20px;
+}
+
+/*
+======================================
+Form
+======================================
+*/
+
+.form__input {
+    appearance: none;
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    font-family: "Basis Grotesque Pro", system-ui;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__input::placeholder {
+    font-family: "Basis Grotesque Pro", system-ui;
+    opacity: 0.35;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.form__input--radio {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.form__input--radio:checked {
+    background: url(img/Ellipse\ 19.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form__label {
+    opacity: 0.6;
+    margin-right: 15px;
+}
+
+.form__input--bordered {
+    border-top: none;
+    width: 100%;
+    height: 50px;
+    padding-left: 35px;
+}
+
+.form__input--underlined {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form__input--checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.form__input--checkbox:checked {
+    background: url(img/Vector\ 39.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*
+======================================
+Button
+======================================
+*/
+
+.button {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    appearance: none;
+    font-weight: 400;
+}
+
+.button--amount {
+    width: 25%;
+    height: 50px;
+    padding-top: 13px;
+    border-left: none;
+}
+
+.button--left-border {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);;
+}
+
+input:checked + .button--amount {
+    background-color: #0536FC;
+    color: #fff;
+} 
+
+.button--submit {
+    width: 213px;
+    height: 55px;
+    background: #0536FC;
+    color: #fff;
+}
+
+/*
+======================================
+MEDIUM SCREENS
+======================================
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .grid--none {
+        margin: 150px auto;
+        width: 80%;
+    }
+
+    .form__input--underlined {
+        max-width: 500px;
+    }
+}
+
+/*
+======================================
+LARGE SCREENS
+======================================
+*/
+
+@media screen and (min-width: 1200px) {
+    /*
+    ======================================
+    Grid
+    ======================================
+    */
+    
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 150px 0 150px 210px;
+    }
+    
+    .grid__heading {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    
+    .grid__form-heading {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin: 0;
+    }
+    
+    .grid__form {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    } 
+
+    /*
+    ======================================
+    Form
+    ======================================
+    */
+
+    .form__input--bordered {
+        width: 90%;
+    }
+
+    .form__input--underlined {
+        width: 66%;
+        max-width: 480px;
+    }
+
+    /*
+    ======================================
+    Button
+    ======================================
+    */
+
+    .button--amount {
+        width: 22.5%;
+    }
+    }
