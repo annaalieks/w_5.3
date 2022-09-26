@@ -10,7 +10,7 @@
 <body>
    <main>
         <section class="grid grid--none">
-            <div class="grid__heading">
+            <div class="grid__heading heading">
                 <h3 class="heading__subtitle heading__subtitle--blue uppercase">Інвестиції</h3>
                 <h2 class="heading__title uppercase">Зробити<br> інвестиції у програму</h2>
             </div>
@@ -33,20 +33,22 @@
                     </div>
                 </div>           
                 <h3 class="heading__subtitle uppercase">Банківська карта</h3>
-                <div class="container container--top-margin-m">
-                        <input type="radio" id="50000" name="amount" value="50000" hidden checked>
-                        <label class="button button--amount button--left-border" for="50000">50 000</label>
-                        <input type="radio" id="30000" name="amount" value="30000" hidden>
-                        <label class="button button--amount" for="30000">30 000</label>
-                        <input type="radio" id="10000" name="amount" value="10000" hidden>
-                        <label class="button button--amount" for="10000">10 000</label>
-                        <input type="radio" id="1000" name="amount" value="1000" hidden>
-                        <label class="button button--amount" for="1000">1 000</label>        
+                <div class="payment-amount container--top-margin-m">
+                    <div class="container">
+                            <input type="radio" id="50000" name="amount" value="50000" hidden checked>
+                            <label class="payment-amount__label payment-amount__label--left-border" for="50000">50 000</label>
+                            <input type="radio" id="30000" name="amount" value="30000" hidden>
+                            <label class="payment-amount__label" for="30000">30 000</label>
+                            <input type="radio" id="10000" name="amount" value="10000" hidden>
+                            <label class="payment-amount__label" for="10000">10 000</label>
+                            <input type="radio" id="1000" name="amount" value="1000" hidden>
+                            <label class="payment-amount__label" for="1000">1 000</label>        
+                    </div>
+                    <div>
+                        <input class="payment-amount__input form__input" type="number" name="amount" placeholder="Інша сумма">
+                    </div>
                 </div>
-                <div>
-                    <input class="form__input form__input--bordered" type="number" name="amount" placeholder="Інша сумма">
-                </div>
-                <div class="container container--top-margin-s">
+                <div class="container container--top-margin-s container--bottom-margin">
                     <div class="container container--align">
                         <input class="form__input form__input--radio" type="radio" id="monthly" name="regularity" value="monthly" checked>
                         <label class="form__label" for="monthly">Щомісячно</label>
@@ -56,15 +58,15 @@
                         <label class="form__label" for="once">Одноразово</label>
                     </div>
                 </div>
-                <div class="container--top-margin-m">
-                    <label class="heading__subtitle uppercase" for="name">Імʼя</label><br>
+                <div class="container--bottom-margin">
+                    <label class="form__label--users-data uppercase" for="name">Імʼя</label>
                     <input class="form__input form__input--underlined" type="text" name="name" id="name" placeholder="Напишіть ваше імʼя" required>
                 </div>
-                <div class="container--top-margin-m">
-                    <label class="heading__subtitle uppercase" for="email">Email</label><br>
+                <div class="container--bottom-margin">
+                    <label class="form__label--users-data uppercase" for="email">Email</label>
                     <input class="form__input form__input--underlined" type="email" name="email" id="email" placeholder="Напишіть вашу електронну адресу" required>
                 </div>
-                <div class="container--top-margin-m">
+                <div class="container--top-margin-s">
                     <label class="form__label">
                         <input class="form__input form__input--checkbox" type="checkbox" name="accept offer contact" checked>
                         Я приймаю <a class="link" href="#" target="_blank">Договір оферти</a>

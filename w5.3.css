@@ -86,6 +86,7 @@ Heading
     margin: 0;
 }
 
+
 .heading__subtitle--blue {
     color: #0536FC;
     opacity: 0.9;
@@ -181,11 +182,10 @@ Form
     margin-right: 15px;
 }
 
-.form__input--bordered {
-    border-top: none;
-    width: 100%;
-    height: 50px;
-    padding-left: 35px;
+.form__label--users-data {
+    display: block;
+    font-weight: 700;
+    margin: 0;
 }
 
 .form__input--underlined {
@@ -210,6 +210,39 @@ Form
 
 /*
 ======================================
+Payment amount
+======================================
+*/
+
+.payment-amount__label {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    appearance: none;
+    font-weight: 400;
+    width: 25%;
+    height: 50px;
+    padding-top: 13px;
+    border-left: none;
+}
+
+.payment-amount__label--left-border {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);;
+}
+
+input:checked + .payment-amount__label {
+    background-color: #0536FC;
+    color: #fff;
+} 
+
+.payment-amount__input {
+    border-top: none;
+    width: 100%;
+    height: 50px;
+    padding-left: 35px;
+}
+
+/*
+======================================
 Button
 ======================================
 */
@@ -221,24 +254,8 @@ Button
     font-weight: 400;
 }
 
-.button--amount {
-    width: 25%;
-    height: 50px;
-    padding-top: 13px;
-    border-left: none;
-}
-
-.button--left-border {
-    border-left: 1px solid rgba(0, 0, 0, 0.15);;
-}
-
-input:checked + .button--amount {
-    background-color: #0536FC;
-    color: #fff;
-} 
-
 .button--submit {
-    width: 213px;
+    padding: 15px 60px;
     height: 55px;
     background: #0536FC;
     color: #fff;
@@ -278,7 +295,7 @@ LARGE SCREENS
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 150px 0 150px 210px;
+        padding: 150px 0 150px 14.5%;
     }
     
     .grid__heading {
@@ -297,28 +314,23 @@ LARGE SCREENS
         grid-column: 2/3;
     } 
 
+    .grid--none {
+        margin: 0;
+        width: 100%;
+    }    
+
     /*
     ======================================
     Form
     ======================================
     */
 
-    .form__input--bordered {
-        width: 90%;
+    .payment-amount {
+        max-width: 635px;
     }
 
     .form__input--underlined {
         width: 66%;
         max-width: 480px;
     }
-
-    /*
-    ======================================
-    Button
-    ======================================
-    */
-
-    .button--amount {
-        width: 22.5%;
-    }
-    }
+}
